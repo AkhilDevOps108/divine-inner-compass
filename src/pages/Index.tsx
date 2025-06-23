@@ -190,6 +190,18 @@ const Index = () => {
               </h1>
               <p className="text-sm text-gray-600 mt-1">{getGreeting()}</p>
             </div>
+            
+            {/* Beating Heart Animation */}
+            <div className="absolute left-1/2 transform -translate-x-1/2">
+              <Heart 
+                className="h-8 w-8 text-rose-500 animate-pulse" 
+                fill="currentColor"
+                style={{
+                  animation: 'pulse 1.5s ease-in-out infinite'
+                }}
+              />
+            </div>
+            
             <div className="text-right">
               <p className="text-lg font-medium text-gray-800">
                 {currentTime.toLocaleTimeString([], { 
