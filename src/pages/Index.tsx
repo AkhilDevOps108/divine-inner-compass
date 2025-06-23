@@ -180,6 +180,29 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
+      <style jsx>{`
+        @keyframes heartbeat {
+          0% {
+            transform: scale(1);
+          }
+          14% {
+            transform: scale(1.3);
+          }
+          28% {
+            transform: scale(1);
+          }
+          42% {
+            transform: scale(1.3);
+          }
+          70% {
+            transform: scale(1);
+          }
+        }
+        .heartbeat {
+          animation: heartbeat 1.5s ease-in-out infinite;
+        }
+      `}</style>
+      
       {/* Header */}
       <div className="bg-white/80 backdrop-blur-sm border-b border-blue-100 sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-4">
@@ -191,14 +214,11 @@ const Index = () => {
               <p className="text-sm text-gray-600 mt-1">{getGreeting()}</p>
             </div>
             
-            {/* Beating Heart Animation */}
+            {/* Realistic Beating Heart Animation */}
             <div className="absolute left-1/2 transform -translate-x-1/2">
               <Heart 
-                className="h-8 w-8 text-rose-500 animate-pulse" 
+                className="h-8 w-8 text-rose-500 heartbeat" 
                 fill="currentColor"
-                style={{
-                  animation: 'pulse 1.5s ease-in-out infinite'
-                }}
               />
             </div>
             
