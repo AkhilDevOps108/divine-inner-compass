@@ -53,7 +53,7 @@ const Index = () => {
       morning: "Divine Morning Light",
       afternoon: "Peaceful Afternoon",
       evening: "Blessed Evening",
-      night: "Serene Night"
+      night: "Peaceful Night"
     };
     return greetings[timeOfDay];
   };
@@ -186,7 +186,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Sahaj Marg Companion
+                Pranahuti
               </h1>
               <p className="text-sm text-gray-600 mt-1">{getGreeting()}</p>
             </div>
